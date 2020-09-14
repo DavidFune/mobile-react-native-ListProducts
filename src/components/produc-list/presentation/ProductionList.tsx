@@ -1,12 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 
 // import { Container } from './styles';
 
 const ProductionList: React.FC = () => {
   return (
       <View>
-          LIsta de Produtos...
+        <Text>Lista de Produtos...</Text>
       </View>
   );
 }
