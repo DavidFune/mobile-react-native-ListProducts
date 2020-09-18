@@ -4,11 +4,11 @@ export class ProductsListData {
         Object.assign(this,data)
     }
 
-    docs: ProductData | undefined
-    total: number | undefined
-    limit: number | undefined
-    page: number | undefined
-    pages: number | undefined
+    docs?: ProductData
+    total?: number
+    limit?: number
+    page?: number
+    pages?: number
 
 
 }

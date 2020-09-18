@@ -1,7 +1,7 @@
 import axios from "axios"
 
-const api = axios.create({
+const productsApi = axios.create({
     baseURL: 'https://rocketseat-node.herokuapp.com/api'
 })
 
-export default api
+export default productsApi
