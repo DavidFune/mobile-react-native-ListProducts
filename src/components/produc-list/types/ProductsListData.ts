@@ -4,7 +4,7 @@ export class ProductsListData {
         Object.assign(this,data)
     }
 
-    docs?: ProductData
+    docs!: ProductData[];
     total?: number
     limit?: number
     page?: number

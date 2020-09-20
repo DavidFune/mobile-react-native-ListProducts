@@ -4,7 +4,7 @@ import {Welcome} from "../presentation/Welcome"
 
 // import { Container } from './styles';
 
-const WelcomeContainer: React.FC = () => {
+const WelcomeContainer = () => {
   return < Welcome/>;
 }
 

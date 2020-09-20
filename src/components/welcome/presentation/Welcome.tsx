@@ -17,10 +17,9 @@ function goListProduct({ navigation }: {
         alignSelf: "center",
         alignItems: "center",
         justifyContent: "center",
-        height: "50%",
-        width: "50%",
+        height: "100%",
+        width: "100%",
         backgroundColor: "#b87fee",
-        marginTop: "30%"
 
 
     }}>
@@ -36,14 +35,13 @@ function goListProduct({ navigation }: {
           title="Vamos ver os Produtos???"
           color="#D0AAF3"
           onPress={() => {
-              console.log("click");
               navigation.navigate("Produtos")
           }}/>
     </View>)
 
 }
 
-const Welcome: React.FC = ({ }) => {
+const Welcome = ({ }) => {
     return (
         <Stack.Navigator initialRouteName="Lista de Produtos">
             <Stack.Screen name="Lista de Produtos" component={goListProduct}></Stack.Screen>

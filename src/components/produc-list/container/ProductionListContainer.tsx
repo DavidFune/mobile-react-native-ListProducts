@@ -5,7 +5,7 @@ import productsApi from "../../../services/api/productsApi"
 
 
 
-const ProductionListContainer: React.FC = () => {
+const ProductionListContainer = () => {
   
   const getProductionList = async():Promise<ProductsListData> => {
     const productionlist: ProductsListData = await (await productsApi.get('/products')).data
@@ -21,11 +21,8 @@ const ProductionListContainer: React.FC = () => {
       setProductionList(data)
     })
   },[page])
-
-  console.log("Products",productionList);
   
-
-  return <ProductionList />;
+  return <ProductionList productslist={productionList}/>;
 }
 
 export  {ProductionListContainer};

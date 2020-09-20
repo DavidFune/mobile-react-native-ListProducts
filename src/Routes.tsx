@@ -19,13 +19,12 @@ function HomeScreen() {
 
 const Stack = createStackNavigator();
 
-export const Routes: React.FC<RoutesProps> = ({}) => {
+export const Routes = ({}) => {
 
     return(
         <NavigationContainer>
             <Stack.Navigator initialRouteName='Welcome!!!'>
                 <Stack.Screen name="Welcome" component={WelcomeContainer} />
-                <Stack.Screen name="Lista de Produtos" component={ProductionListContainer} />
             </Stack.Navigator>
         </NavigationContainer>
     )
