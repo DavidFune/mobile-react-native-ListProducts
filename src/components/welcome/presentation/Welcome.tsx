@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Button } from 'react-native';
-import { ProductionListContainer } from "../../produc-list/container/ProductionListContainer"
+import { ProductionListContainer } from "../../product-list/container/ProductionListContainer"
 import { createStackNavigator } from '@react-navigation/stack';
 
 class WelcomeProps {
@@ -45,7 +45,6 @@ const Welcome = ({ }) => {
     return (
         <Stack.Navigator initialRouteName="Lista de Produtos">
             <Stack.Screen name="Lista de Produtos" component={goListProduct}></Stack.Screen>
-            <Stack.Screen name="Produtos" component={ProductionListContainer} />
         </Stack.Navigator>
 
     )

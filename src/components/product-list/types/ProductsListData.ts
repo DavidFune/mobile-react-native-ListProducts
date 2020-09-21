@@ -1,4 +1,4 @@
-import { ProductData } from "../../produc-card/types/ProductData";
+import { ProductData } from "../../product-card/types/ProductData";
 export class ProductsListData {
     constructor(data:Partial<ProductsListData>) {
         Object.assign(this,data)
