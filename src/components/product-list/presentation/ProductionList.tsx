@@ -10,15 +10,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 // import { Container } from './styles';
 
 class ProductionListProps {
-  productslist?: ProductsListData
+  productslist: ProductsListData
+  goToProduct: (productId: string) => void
 }
 
-const Stack = createStackNavigator()
-
-const ProductionList = ({props, navigation}:{
-  props: ProductionListProps,
-  navigation: any,
-}) => {
+const ProductionList = (props: ProductionListProps) => {
   return (
       <ScrollView>
         {props.productslist?.docs.map(product =>
@@ -26,21 +22,11 @@ const ProductionList = ({props, navigation}:{
               key={product._id}
               title={product.title}
               description={product.description}
-              onPress={() => {navigation.navigate('Produto', {item: product})} }/>
+             onPress={ () => props.goToProduct(product._id.toString())}
+              />
           )}
       </ScrollView>
   );
 }
-
-const ProductionListScreen = ( props: ProductionListProps) =>{
-  return(
-    <Stack.Navigator>
-      <Stack.Screen name="Item" component={(ProductionList)}></Stack.Screen>
-    </Stack.Navigator>
-  );
-}
-
-
-
 
 export { ProductionList, ProductionListProps };
